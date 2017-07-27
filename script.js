@@ -1,4 +1,4 @@
-jQuery(document).ready(function(){
+$(document).ready(function(){
 	$(".show-photo").click(function(){
 		$(".my-photo").toggleClass("show");
 	})
