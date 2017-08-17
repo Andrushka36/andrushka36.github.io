@@ -1,15 +1,32 @@
-h1,h2,h3,h3,h4,h5,h6 {
-	font-family: 'Open Sans';
+@font-face {
+  font-family: Roboto Slab Regular;
+  src: url('fonts/roboto-slab-regular.ttf');
+}
+
+@font-face {
+  font-family: Open Sans;
+  src: url('fonts/open-sans.ttf');
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+h1,h2 {
+	font-family: Open Sans;
 }
 
 p {
-	font-family: 'Roboto Slab';
+	font-family: Roboto Slab Regular;
 	font-size: .8em;
 	color: #333;
 }
 
 .container {
 	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
 }
 
 .site-title  {
@@ -34,28 +51,93 @@ hr {
 	color: #157fc4;
 	font-weight: 600;
 	cursor: pointer;
-	text-align:center;
+	text-align: center;
 }
 
 .my-photo {
-	height: 300px;
 	border-radius: 4px;
 	display: none;
+}
+
+img {
+	width: 100%;
 }
 .show {
 	display: block;
 }
 
+.sites {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.site {
+	margin-top: 20px;
+	display: flex;
+	width: 100%;
+	flex-flow: column wrap;
+	flex: 0 1 100%;
+}
+
+.site__screenshot, .site__description {
+	flex: 1 1 50%;
+}
+
+.site__description {
+	order: 1;
+}
+
+.site__screenshot {
+	order: 2;
+}
+.small {
+	font-size: 65%;
+}
+a {
+	text-decoration: none;
+	color: #157fc4;
+}
+
+@media (min-width: 700px) {
+	.site {
+		flex-direction: row;
+	}
+	.site__screenshot {
+		order: 1;
+	}
+	.site__description {
+		order: 2;
+	}
+	.site__description {
+		padding: 0 10px;
+		box-sizing: border-box;
+	}
+}
 @media (min-width: 900px) {
 	.about {
 		flex-direction: row;
 	}
 	.my-photo {
 		display: block;
-		margin: 0 0 10px 10px;
 	}
 	.show-photo {
 		display: none;
+	}
+	.about__text {
+		flex: 1 1 800px;
+	}
+	.about__photo {
+		flex: 1 1 400px;
+		padding: 0 0 10px 10px;
+	}	
+}
+
+@media (min-width: 1000px) {
+	.sites {
+		flex-direction: row;
+	}
+	.site {
+		flex-basis: 50%;
 	}
 }
 @media (min-width: 1200px) {
