@@ -16,6 +16,10 @@ header {
 	background-color: #000;
 }
 
+header, nav, footer {
+	flex-shrink: 0;
+}
+
 .container {
 	width: 100%;
 	padding: 0 20px;
@@ -143,7 +147,12 @@ nav, footer {
 }
 
 .slider, main {
-	flex: 1;
+	flex: 1 1 0;
+}
+
+.slider {
+	display: flex;
+	align-items: center;
 }
 
 .slider .container {
@@ -269,10 +278,6 @@ table td {
 	.header-text {
 		font-size: 18px;
 		line-height: 16px;
-	}
-	.slider {
-		display: flex;
-		align-items: center;
 	}
 
 	.slider .container {
