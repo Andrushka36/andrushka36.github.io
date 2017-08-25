@@ -1,0 +1,23 @@
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(../images/background-2.jpg);
+}
+
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(../images/background-3.jpg);
+}
+
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(../images/background-4.jpg);
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(../images/background-5.jpg);
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(../images/background-6.jpg);
+}
+.cb-slideshow li:nth-child(7) span { 
+    background-image: url(../images/background-7.jpg);
+}
+.cb-slideshow li:nth-child(8) span { 
+    background-image: url(../images/background-8.jpg);
+}

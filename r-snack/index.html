@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Royal Snack</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/jquery.fancybox.css">
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js" ></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/swfobject.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+	</head>
+	<body>
+		<div id="main">
+			<ul class="cb-slideshow">
+	        	<li><span>Image 01</span></li>
+	        	<li><span>Image 02</span></li>
+	        	<li><span>Image 03</span></li>
+	        	<li><span>Image 04</span></li>
+	        	<li><span>Image 05</span></li>
+	        	<li><span>Image 06</span></li>
+	        	<li><span>Image 07</span></li>
+	        	<li><span>Image 08</span></li>
+        	</ul>
+			<div class="phone">
+        		<div class="phone__logo">
+					<p>8 (925) 342-65-44</p>
+				</div>
+        		<div class="delivery-logo open-block" id="delivery"></div>
+    		</div>
+			<div class="logo">
+			</div>
+			<div class="menu-block">
+				<a href="menu.html"><div class="menu-block__item menu-menu"></div></a>
+				<div class="menu-block__item menu-about open-block" id="about"></div>
+				<div class="menu-block__item menu-product open-block" id="product"></div>
+				<div class="menu-block__item menu-photo open-block" id="photo"></div>
+			</div>
+			<div class="buttons">
+				<div class="buttons__item button-social open-block" id="social"></div>
+				<div class="buttons__item button-question open-block" id="question"></div>
+			</div>
+			<div id="image-background"></div>
+			<div id="black-background"></div>
+		</div>
+		<div class="opened-block" id="block-delivery">
+			<div class="phone">
+				<p>ЗАКАЗ ПО ТЕЛЕФОНУ</p>
+        		<div class="phone__logo"><p>8 (925) 342-65-44</p></div>
+    		</div>
+			<div class="close"></div>
+			<div class="opened-block__content">
+        		<p>Доставка по г. Жуковский</p>
+				<div class="time">9:00 - 19:00
+				</div>
+				<div class="time">9:00 - 16:30</div>
+				<br>
+				<img src="images/days.png">
+				<p>Минимальный заказ на сумму 200 рублей,<br>доставка бесплатно</p>
+			</div>
+			<div class="action"></div>
+		</div>
+		<div class="opened-block" id="block-social">
+			<div class="close"></div>
+			<div class="opened-block__content">
+				<h1 class="social-title">МЫ В СОЦИАЛЬНЫХ СЕТЯХ:</h1>
+				<a href="#" class="social-link" target="_blank"><div class="logo-social logo-vkontakte"></div></a>
+				<a href="#" class="social-link" target="_blank"><div class="logo-social logo-odnoklassniki"></div></a>
+				<br>
+				<a href="#" class="social-link" target="_blank"><div class="logo-social logo-facebook"></div></a>
+				<a href="#" class="social-link" target="_blank"><div class="logo-social logo-instagram"></div></a>
+			</div>
+		</div>
+		<div class="opened-block" id="block-question">
+			<div class="close"></div>
+			<div class="opened-block__content">
+				<h1>Спросите у нас</h1>
+				<form class="contact-form" method="post">
+					<label class="contacts-form__row">
+	                	<div class="label">Имя</div>
+	                	<input type="text" name="name" class="name" required="">
+	            	</label>
+	            	<label class="contacts-form__row">
+						<div class="label">E-mail</div>
+						<input type="email" name="email" class="email" required="">
+					</label>
+	            	<label class="contacts-form__row">
+						<div class="label">Сообщение</div>
+						<textarea name="message" rows="5" cols="40" class="message" required=""></textarea>
+				    </label>
+					<button class="send" type="submit"></button>
+				</form>
+			</div>
+		</div>
+		<div class="opened-block" id="block-about">
+			<div class="close"></div>
+			<div class="opened-block__content">
+				<p>Наша компания убеждена, что сегодня еда должна быть вкусной и полезной одновременно, давать человеку все необходимые питательные вещества.</p>
+				<p>Мы хотим, чтобы наш продукт могли приобретать не только взрослые, но и дети, поскольку здоровая и сбалансированная пища является залогом их физического и интеллектуального развития.</p>
+				<p class="hide-text__title">Создавая наш продукт, мы следуем ряду принципов</h1>
+				<div class="hide-text__information">
+					<ul>
+						<li>отказ от искусственных добавок и компонентов</li>
+						<li>в составе только свежие и качественные продукты и ингредиенты, обладающие отменным вкусом</li>
+						<li>контроль качества каждой единицы продукции</li>
+						<li>ориентация на рекомендации по питанию ведущих мировых диетологических институтов* (использование цельнозернового хлеба и муки; овощей и фруктов, богатых клетчаткой; минимального количества сахара)</li>
+					</ul>
+					<p>* World Health Organisation; Academy Of Nutrition And Dietetics; USDA.</p>
+				</div>
+				<p class="hide-text__title">Почему у нас такие цены?</h1>
+				<p class="hide-text__information">Поскольку наш продукт является новинкой и не имеет аналога на рынке, мы хотим познакомить с ним как можно больше людей и предлагаем его по привлекательной цене за счет минимальной наценки и рационального использования ресурсов. При этом мы не отступаем от главных принципов: качество, польза для здоровья и вкус.</p>
+ 				<div id="video"></div>
+				<p>Контакты:<br>
+				Качество продукции и обслуживания: 8 (962) 979-34-49<br>
+				Оптовые поставки и сотрудничество: 8 (909) 652-28-82<br>
+				Ваши предложения и отзывы: info@r-snack.ru</p>
+			</div>
+		</div>
+		<div class="opened-block" id="block-product">
+			<div class="close"></div>
+			<div class="opened-block__content">
+				<div class="block-images">
+					<div class="main-image" id="why-we"></div>
+					<div class="why-we-images images">
+						<div class="sub-link" id="healthy"></div>
+						<div class="sub-link" id="tasty"></div>
+						<div class="sub-link" id="nutritionally"></div>
+						<div class="sub-link" id="available"></div>
+					</div>
+				</div>
+				<div class="block-images">
+					<div class="main-image" id="components"></div>
+					<div class="components-images images">
+						<div class="sub-link" id="carbohydrates"></div>
+						<div class="sub-link" id="vitamins"></div>
+						<div class="sub-link" id="fiber"></div>
+						<div class="sub-link" id="proteins"></div>
+					</div>
+				</div>
+				<div class="text-why-we">
+					<div class="text-healthy information">
+						<h2>Это полезно</h2>
+						<p>При разработке нашего продукта мы ориентировались на рекомендации по питанию ведущих мировых диетологических институтов*:</p>
+						<ul>
+							<li>использование только натуральных и качественных ингредиентов, богатых клетчаткой, витаминами и минералами (цельнозерновой хлеб и мука; диетическое мясо; лен; кокосовое масло; минимум сахара в печенье);</li>
+							<li>разнообразие используемых продуктов;</li>
+							<li>фрукты, овощи, растительные масла.</li>
+						</ul>
+						<p>* World Health Organisation; Academy Of Nutrition And Dietetics; USDA</p>
+						<p>В продукте также отсутствуют консерванты, гмо, соя, красители и ароматизаторы.</p>
+					</div>
+					<div class="text-tasty information">
+						<h2>Это вкусно</h2>
+						<p>Свежие продукты, приготовленные по специально разработанным рецептам, являются по-настоящему аппетитным блюдом, способным порадовать любого человека.</p>
+						<p>Натуральные соусы на основе греческого йогурта или протертых томатов придают нашим сэндвичам насыщенный и сбалансированный вкус.</p>
+						<p>Бельгийский шоколад, вяленая клюква, лен и цельнозерновая мука делают наше печенье прекрасным лакомством.</p>
+						<p>Мы заботимся о том, чтобы наши фрукты и овощи были сочными и свежими.</p>
+					</div>
+					<div class="text-nutritionally information">
+						<h2>Это питательно</h2>
+						<p>Наш продукт сочетает в себе все необходимые питательные вещества:</p>
+						<ul>
+							<li>растительные и животные белки;</li>
+							<li>медленные углеводы;</li>
+							<li>клетчатку;</li>
+							<li>растительные жиры.</li>
+						</ul>
+						<p>Каждый человек может найти для себя такой набор Royal Snack, который подойдет именно ему.</p>
+					</div>
+					<div class="text-available information">
+						<h2>Это доступно</h2>
+						<p>Одна из целей нашей компании - сделать здоровую еду доступной.</p>
+						<p>Сегодня такая еда находится, как правило, в премиальном ценовом сегменте. Однако цены на продукцию часто завышены необоснованно.</p>
+						<p>Поскольку наш продукт является новинкой и не имеет аналога на рынке, мы хотим познакомить с ним как можно больше людей и предлагаем его по привлекательной цене за счет минимальной наценки и рационального использования ресурсов. При этом мы не отступаем от главных принципов: качество, польза для здоровья и вкус.</p>
+					</div>
+				</div>
+				<div class="text-components">
+					<div class="text-carbohydrates information">
+						<h2>Медленные (сложные) углеводы</h2>
+						<p>Наши сэндвичи из цельнозернового хлеба, а также овсяное печенье с цельнозерновой мукой содержат в себе большое количество медленных углеводов.</p>
+						<p>В отличие от быстрых, медленные (сложные) углеводы обладают рядом существенных преимуществ:</p>
+						<ul>
+							<li>сохраняют ощущение сытости на продолжительное время;</li>
+							<li>нормализуют пищеварение и улучшают обмен веществ;</li>
+							<li>содержат большое количество витаминов и минералов, клетчатки;</li>
+							<li>имеют низкий гликемический индекс;</li>
+							<li>необходимы для оптимальной работы мозга;</li>
+							<li>снижают нервозность и чувство усталости.</li>
+						</ul>
+					</div>
+					<div class="text-vitamins information">
+						<h2>Витамины и минералы</h2>
+						<p>Витамины и минералы присутствуют во всей нашей продукции.</p>
+						<p>Витамин А (177% от рекомендуемой суточной потребности (РСП) содержится во всех наборах Royal Snack) - антиоксидант, необходимый для зрения, костей и работы иммунной системы. Замедляет процесс старения.</p>
+						<p>Витамин С (98% РСП в Royal Snack двойные фрукты) является фактором защиты организма oт последствий стресса. Увеличивает устойчивость к инфекциям. Уменьшает эффекты воздействия различных аллергенов.</p>
+						<p>Витамин РР (52% РСП в Royal Snack двойной сэндвич) регулирует окислительно-восстановительные процессы в организме, нормализует содержание холестерина в крови. Необходим для здорового сердца и кровообращения.</p>
+						<p>Фосфор (38% РСП в Royal Snack двойное печенье) обеспечивает нормальный рост костной и зубной тканей организма, поддерживает их в здоровом состоянии. Играет важную роль в обмене веществ.</p>
+						<p>Селен (66% РСП в Royal Snack двойной сэндвич) способствует повышению иммунитета и оказывает стимулирующее действие на обменные процессы. Оказывает благоприятное влияние на состояние кожных покровов, ногтей и волос.</p>
+					</div>
+					<div class="text-fiber information">
+						<h2>Клетчатка</h2>	
+						<p>В наших наборах содержится от 32 до 50 % рекомендуемой суточной потребности в клетчатке.</p>
+						<p>Клетчатка принимает активное участие в жизнедеятельности организма:</p>
+						<ul>
+							<li>сохраняет здоровье кишечника и нормальную микрофлору;</li>
+							<li>способствует поддержанию нормального уровня холестерина и сахара в крови;</li>
+							<li>снижает риск развития некоторых видов рака, сердечно-сосудистых заболеваний и диабета 2 типа;</li>
+							<li>помогает в борьбе с лишним весом;</li>
+							<li>очищает организм от вредных токсинов.</li>
+						</ul>
+					</div>
+					<div class="text-proteins information">
+						<h2>Белки</h2>
+						<p>В нашем продукте источником животного белка является сэндвич с куриной грудкой. Растительный белок содержится в цельнозерновом хлебе, арахисовом хумусе вегетарианского набора, а также в овсяном печенье со льном и цельнозерновой мукой.</p>
+						<p>В организме белок выполняет следующие важные функции: 
+						<ul>
+							<li>содержит весь набор необходимых человеку аминокислот;</li>
+							<li>из белка состоят мышцы, внутренние органы, кровеносная, иммунная система, гормоны и ферменты, регулирующие все физиологические и обменные процессы в организме человека;</li>
+							<li>для выработки антител, из которых состоит наш иммунитет, требуются белки;</li>
+							<li>дефицит белков приводит к повышенной утомляемости и усталости.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="opened-block" id="block-photo">
+			<div class="close"></div>
+			<div class="opened-block__content">
+				<div class="image">
+					<a href="images/photo/01.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-01.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/02.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-02.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/03.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-03.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/04.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-04.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/05.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-05.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/06.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-06.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/07.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-07.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/08.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-08.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/09.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-09.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/10.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-10.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/11.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-11.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/12.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-12.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/13.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-13.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/14.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-14.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/15.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-15.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/16.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-16.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/17.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-17.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/18.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-18.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/19.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-19.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/20.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-20.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/21.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-21.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/22.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-22.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/23.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-23.jpg" alt="" />
+					</a>
+				</div>
+				<div class="image">
+					<a href="images/photo/24.jpg" data-fancybox="gallery">
+						<img src="images/photo/small-24.jpg" alt="" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
