@@ -17,6 +17,9 @@ h1,h2 {
 	font-family: Open Sans;
 }
 
+h2 {
+	margin: 0;
+}
 p {
 	font-family: Roboto Slab Regular;
 	font-size: .8em;
