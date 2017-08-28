@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: Open Sans;
-  src: url('fonts/open-sans.ttf');
+  src: url('fonts/open-sans.ttf'), url('fonts/open-sans.woff');;
 }
 
 body {
@@ -40,13 +40,17 @@ hr {
 	border: 2px solid #ccc;
 	border-radius: 2px;
 }
+
 .about {
 	display: flex;
-	flex-direction: column;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 }
 
+.about__text, .about__photo {
+	flex-basis: 100%;
+}
 .show-photo {
 	color: #157fc4;
 	font-weight: 600;
@@ -68,22 +72,23 @@ img {
 
 .sites {
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: row wrap;
 }
 
 .site {
 	margin-top: 20px;
 	display: flex;
 	width: 100%;
-	flex-flow: column wrap;
-	flex: 0 1 100%;
+	flex-flow: row wrap;
+	flex-basis: 100%;
 }
+
 .site:nth-child(1), .site:nth-child(2), .site:nth-child(3) {
 	margin-bottom: 20px;
 }
 
 .site__screenshot, .site__description {
-	flex: 1 1 50%;
+	flex-basis: 100%;
 }
 
 .site__description {
@@ -107,13 +112,12 @@ a {
 	}
 	.site__screenshot {
 		order: 1;
+		flex-basis: 50%;
 	}
 	.site__description {
 		order: 2;
-	}
-	.site__description {
+		flex-basis: calc(50% - 20px);
 		padding: 0 10px;
-		box-sizing: border-box;
 	}
 }
 @media (min-width: 900px) {
@@ -127,10 +131,10 @@ a {
 		display: none;
 	}
 	.about__text {
-		flex: 1 1 800px;
+		flex-basis: 66%;
 	}
 	.about__photo {
-		flex: 1 1 400px;
+		flex-basis: calc(34% - 10px);
 		padding: 0 0 10px 10px;
 	}	
 }
