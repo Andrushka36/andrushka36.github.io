@@ -154,6 +154,7 @@ body {
 	color: #595959;
 	font: 400 50px Bebas;
 	margin: 0;
+	text-decoration: none;
 }
 
 .phone__logo p {
@@ -295,7 +296,7 @@ body {
 	top: 0px;
 	right: 0px;
 	bottom: 0px;
-	z-index: 25;
+	z-index: 5;
 }
 
 .opened-block__content, .product-block__inner {
@@ -896,7 +897,7 @@ h2 {
 	background-position: 0 0;
 }
 
-.product12 .product-image:hover {
+#product12 .product-image:hover {
 	background-position: 0 -300px;
 }
 
