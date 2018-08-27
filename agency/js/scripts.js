@@ -54,15 +54,11 @@ $(document).ready(function(){
     })
 
     $('.contact-button').click(function(){
-        $('body,html').animate({scrollTop: $('.contacts').offset().top-90}, 500);
+        $('body,html').animate({scrollTop: $('.contacts').offset().top-89}, 500);
     })
 
     $('.main-menu__item').click(function(){
         idValue = $(this).attr('id');
-        if (idValue != 'home') {
-            $('body,html').animate({scrollTop: $('.' + idValue).offset().top-90}, 500);
-        } else {
-            $('body,html').animate({scrollTop: 0}, 500);
-        }
+        $('body,html').animate({scrollTop: $('[data-menu-item-content="' + idValue + '"]').offset().top-89}, 500);
     })
 })
