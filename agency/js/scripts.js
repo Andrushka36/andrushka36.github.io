@@ -1,33 +1,33 @@
-var scrollValue;
-var topValue;
-var idValue;
-var i;
-
-$(document).scroll(function(){
-    scrollValue = $('body,html').scrollTop();
-    if (scrollValue < 30) {
-        topValue = 30 - scrollValue;
-    } else {
-        topValue = 0;
-    }
-    $('.menu').css('top', topValue + 'px');
-	
-	i = $('.main-menu__item').length - 1;	
-	while (i >= 0) {
-		idValue = $('.main-menu__item:eq(' + i + ')').attr('id');
-		var menuElement = $('[data-menu-item-content="' + idValue + '"]');
-        if (scrollValue + 90 >= menuElement.offset().top) {
-            if (!menuElement.hasClass('active')) {
-                $('.main-menu__item').removeClass('active');
-                $('#' + idValue).addClass('active');
-            }
-            break;
-        };
-        i--;
-    }
-});
-
 $(document).ready(function(){
+    var scrollValue;
+    var topValue;
+    var idValue;
+    var i;
+
+    $(window).scroll(function(){
+        scrollValue = $('body,html').scrollTop();
+        if (scrollValue < 30) {
+            topValue = 30 - scrollValue;
+        } else {
+            topValue = 0;
+        }
+        $('.menu').css('top', topValue + 'px');
+
+        i = $('.main-menu__item').length - 1;
+        while (i >= 0) {
+            idValue = $('.main-menu__item:eq(' + i + ')').attr('id');
+            var menuElement = $('[data-menu-item-content="' + idValue + '"]');
+            if (scrollValue + 90 >= menuElement.offset().top) {
+                if (!menuElement.hasClass('active')) {
+                    $('.main-menu__item').removeClass('active');
+                    $('#' + idValue).addClass('active');
+                }
+                break;
+            };
+            i--;
+        }
+    });
+
     $('.menu-toggle').click(function(){
         $(this).toggleClass('opened-menu');
         $('.main-menu').slideToggle();
@@ -54,7 +54,7 @@ $(document).ready(function(){
     })
 
     $('.contact-button').click(function(){
-        $('body,html').animate({scrollTop: $('.contacts').offset().top-89}, 500);
+        $('body,html').animate({scrollTop: $('.contacts').offset().top-90}, 500);
     })
 
     $('.main-menu__item').click(function(){
