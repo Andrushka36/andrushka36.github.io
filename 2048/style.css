@@ -1,0 +1,187 @@
+@keyframes new-value {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes game-over {
+	from {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #776e65;
+	background-color: #faf8ef;
+}
+
+.game {
+	display: table;
+	margin: 0 auto;
+}
+
+.game__header {
+	margin: 30px 0;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	height: 135px;
+}
+
+.game__title {
+	flex-basis: 100%;
+	font-size: 80px;
+	line-height: 135px;
+}
+
+.game-scores {
+	display: flex;
+	justify-content: space-between;
+}
+
+.game-score {
+	flex-basis: 45%;
+}
+
+.game-score, .game__start, .game-over-message__try-again {
+	background: #bbada0;
+	border-radius: 3px;
+	text-align: center;
+	padding: 10px 0;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.game-score__title {
+	font-size: 16px;
+	color: #eee4da;
+}
+
+.game__start, .game-over-message__try-again {
+	align-self: center;
+	padding-left: 25px;
+	padding-right: 25px;
+	cursor: pointer;
+}
+
+.game__board {
+	position: relative;
+}
+
+.game-table {
+	font-size: 55px;
+	font-weight: bold;
+	background: #bbada0;
+	border-radius: 6px;
+	border-spacing: 15px;
+}
+
+.game-table td {
+	width: 107px;
+	height: 107px;
+	background-color: #cdc1b4;
+	text-align: center;
+	border-radius: 3px;
+	transition: 1s;
+}
+
+td.value-2 {
+	background-color: #eee4da;
+}
+
+td.value-4 {
+	background-color: #ede0c8;
+}
+
+td.value-8 {
+	color: #f9f6f2;
+	background-color: #f2b179;
+}
+
+td.value-16 {
+	color: #f9f6f2;
+	background-color: #f59563;
+	font-size: 45px;
+}
+
+td.value-32 {
+	color: #f9f6f2;
+	background-color: #f67c5f;
+}
+
+td.value-64 {
+	color: #f9f6f2;
+	background-color: #f65e3b;
+}
+
+td.value-128 {
+	color: #f9f6f2;
+	background-color: #edcf72;
+	font-size: 45px;
+}
+
+td.value-256 {
+	color: #f9f6f2;
+	background-color: #edcc61;
+	font-size: 45px;
+}
+
+td.value-512 {
+	color: #f9f6f2;
+	background-color: #edc850;
+	font-size: 45px;
+}
+
+td.value-1024 {
+	color: #f9f6f2;
+	background-color: #edc53f;
+	font-size: 35px;
+}
+
+td.value-2048 {
+	color: #f9f6f2;
+	background-color: #edc22e;
+}
+
+td.new-value {
+	animation: new-value 0.5s ease;
+}
+
+.game-over-message {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(238, 228, 218, 0.73);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.game-over-message__title {
+	font-size: 40px;
+	margin-bottom: 40px;
+	animation: game-over 0.8s ease;
+}
+.game-over-message__try-again {
+	animation: game-over 1s ease;
+}
