@@ -74,6 +74,7 @@ const game = {
 		this.board = [];
 		this.isTimerEnabled = false;
 		this.isRunning = false;
+		this.countPainted = 0;
 	},
 	createHeader: function(){
 		document.getElementById("game-board").innerHTML = "";
@@ -219,9 +220,7 @@ const game = {
 				
 				if (!e.target.classList.contains("game-table__cell--press")) {
 					if (e.target.classList.contains("game-table__cell")) {
-						e.target.innerHTML = "<div class='flag'><div class='flag__bottom'></div>" + 
-						"<div class='flag__top'></div><div class='flag__flagpole flag__flagpole--black'></div>" + 
-						"<div class='flag__flagpole flag__flagpole--red'></div><div class='flag__triangle'></div></div>";
+						e.target.innerHTML = "<div class='flag'><div class='flag__bottom'></div><div class='flag__top'></div><div class='flag__flagpole flag__flagpole--black'></div><div class='flag__flagpole flag__flagpole--red'></div><div class='flag__triangle'></div></div>";
 						++this.countPainted;
 						this.displayValue(--flags, "flags");
 						
