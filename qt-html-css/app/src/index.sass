@@ -1,6 +1,4 @@
-@font-face
-  font-family: 'Exo'
-  src: url(/qt-html-css/dist/fonts/Exo2.0-Thin.otf)
+@import url('https://fonts.googleapis.com/css?family=Exo+2:100&subset=cyrillic')
 
 *
   margin: 0
@@ -17,7 +15,6 @@ a
   text-decoration: none
 
 #app
-  font-family: Exo, sans-serif
   display: flex
 
 .page-wrapper
@@ -45,5 +42,7 @@ a
     display: table
     margin: 0 auto
     color: #fff
-    font-weight: normal
+    font:
+      family: 'Exo 2', sans-serif
+      weight: normal
     text-shadow: #000 1px 1px

@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2:100&subset=cyrillic);
 .packages {
   margin: 25px auto 0;
   display: flex;
@@ -10,15 +11,13 @@
   @media (max-width: 991px) {
     .package {
       margin-bottom: 50px; } }
-  .package:not(.package_disabled) {
-    cursor: pointer; }
   .package__main {
     height: 480px;
     display: flex;
     flex-direction: column;
-    position: relative;
-    color: #666;
-    overflow: hidden; }
+    color: #666; }
+    .package:not(.package_disabled) .package__main {
+      cursor: pointer; }
     .package_disabled .package__main {
       color: #b3b3b3; }
   .package__overlay {
@@ -129,8 +128,7 @@
     height: 15px;
     text-align: center;
     color: #fff;
-    text-shadow: 0 1px 0 #000;
-    cursor: auto; }
+    text-shadow: 0 1px 0 #000; }
     .package_disabled .package__footer {
       color: #ff6; }
   .package__buy {
@@ -139,10 +137,6 @@
     border-bottom: 1px dashed #1698d9; }
     .package__buy:hover {
       color: #2ea8e6; }
-
-@font-face {
-  font-family: 'Exo';
-  src: url(/qt-html-css/dist/fonts/Exo2.0-Thin.otf); }
 
 * {
   margin: 0;
@@ -159,7 +153,6 @@ a {
   text-decoration: none; }
 
 #app {
-  font-family: Exo, sans-serif;
   display: flex; }
 
 .page-wrapper {
@@ -186,6 +179,7 @@ a {
     display: table;
     margin: 0 auto;
     color: #fff;
+    font-family: 'Exo 2', sans-serif;
     font-weight: normal;
     text-shadow: #000 1px 1px; }
 

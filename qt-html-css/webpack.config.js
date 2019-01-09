@@ -58,10 +58,6 @@ module.exports = {
             from: "./app/images/",
             to: "./images/",
             toType: 'dir'
-        }, {
-            from: "./app/fonts/",
-            to: "./fonts/",
-            toType: 'dir'
         }])
     ],
     watch: true,

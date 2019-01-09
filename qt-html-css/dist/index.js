@@ -2,7 +2,7 @@
 /*!********************************!*\
   !*** ./app/data/packages.json ***!
   \********************************/
-/*! exports provided: 0, 1, 2, default */function(module){eval('module.exports = [{"id":1,"filling":"с фуа-гра","features":["10 порций","мышь в подарок"],"description":"Печень утки разварная с артишоками.","weight":"0,5","enabled":true,"selected":false},{"id":2,"filling":"с рыбой","features":["40 порций","2 мыши в подарок"],"description":"Головы щучьи с чесноком да свежайшая сёмгушка.","weight":2,"enabled":true,"selected":false},{"id":3,"filling":"с курой","features":["100 порций","5 мышей в подарок","заказчик доволен"],"description":"Филе из цыплят с трюфелями в бульоне.","weight":5,"enabled":false,"selected":false}];\n\n//# sourceURL=webpack:///./app/data/packages.json?')},"./app/src/components/App.jsx":
+/*! exports provided: 0, 1, 2, default */function(module){eval('module.exports = [{"id":1,"filling":"с фуа-гра","features":["10 порций","мышь в подарок"],"description":"Печень утки разварная с артишоками.","weight":"0,5","enabled":true,"selected":false},{"id":2,"filling":"с рыбой","features":["40 порций","2 мыши в подарок"],"description":"Головы щучьи с чесноком да свежайшая сёмгушка.","weight":2,"enabled":true,"selected":true},{"id":3,"filling":"с курой","features":["100 порций","5 мышей в подарок","заказчик доволен"],"description":"Филе из цыплят с трюфелями в бульоне.","weight":5,"enabled":false,"selected":false}];\n\n//# sourceURL=webpack:///./app/data/packages.json?')},"./app/src/components/App.jsx":
 /*!************************************!*\
   !*** ./app/src/components/App.jsx ***!
   \************************************/

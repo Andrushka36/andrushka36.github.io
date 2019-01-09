@@ -17,16 +17,14 @@ $disabledColor: #b3b3b3
   @media (max-width: 991px)
     margin-bottom: 50px
 
-  &:not(.package_disabled)
-    cursor: pointer
-
   &__main
     height: 480px
     display: flex
     flex-direction: column
-    position: relative
     color: #666
-    overflow: hidden
+
+    .package:not(.package_disabled) &
+      cursor: pointer
 
     .package_disabled &
       color: $disabledColor
@@ -172,7 +170,6 @@ $disabledColor: #b3b3b3
     text-align: center
     color: #fff
     text-shadow: 0 1px 0 #000
-    cursor: auto
 
     .package_disabled &
       color: #ff6

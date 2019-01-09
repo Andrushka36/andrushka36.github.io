@@ -19,7 +19,7 @@
 	"description": "Головы щучьи с чесноком да свежайшая сёмгушка.",
 	"weight": 2,
 	"enabled": true,
-	"selected": false
+	"selected": true
 }, {
 	"id": 3,
 	"filling": "с курой",
