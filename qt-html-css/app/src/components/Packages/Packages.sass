@@ -1,0 +1,186 @@
+$defaultColor: #1698d9
+$defaultHoverColor: #2ea8e6
+$selectedColor: #d91667
+$selectedHoverColor: #e62e7a
+$disabledColor: #b3b3b3
+
+.packages
+  margin: 25px auto 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+
+.package
+  flex-basis: 320px
+  font-family: "Trebuchet MS"
+
+  @media (max-width: 991px)
+    margin-bottom: 50px
+
+  &:not(.package_disabled)
+    cursor: pointer
+
+  &__main
+    height: 480px
+    display: flex
+    flex-direction: column
+    position: relative
+    color: #666
+    overflow: hidden
+
+    .package_disabled &
+      color: $disabledColor
+
+  &__overlay
+    background-color: rgba(255, 255, 255, 0.5)
+
+  &__header
+    display: flex
+    height: 45px
+    margin-bottom: -1px
+
+  &__subtitle
+    flex: 1
+    background-color: #f2f2f2
+    border:
+      top: 5px solid $defaultColor
+        right-radius: 5px
+      right: 5px solid $defaultColor
+    padding: 15px 0 0 5px
+    font-size: 16px
+    margin-left: -1px
+
+    .package_hover &
+      border-color: $defaultHoverColor
+
+    .package_selected &
+      border-color: $selectedColor
+
+    .package_selected.package_hover &
+      border-color: $selectedHoverColor
+      color: $selectedHoverColor
+
+    .package_disabled &
+      border-color: $disabledColor
+
+  &__corner
+    width: 45px
+    height: 45px
+    background: linear-gradient(-45deg, #f2f2f2, #f2f2f2 29px, $defaultColor 0, $defaultColor 33px, transparent 0)
+
+    .package_hover &
+      background: linear-gradient(-45deg, #f2f2f2, #f2f2f2 29px, $defaultHoverColor 0, $defaultHoverColor 33px, transparent 0)
+
+    .package_selected &
+      background: linear-gradient(-45deg, #f2f2f2, #f2f2f2 29px, $selectedColor 0, $selectedColor 33px, transparent 0)
+
+    .package_selected.package_hover &
+      background: linear-gradient(-45deg, #f2f2f2, #f2f2f2 29px, $selectedHoverColor 0, $selectedHoverColor 33px, transparent 0)
+
+    .package_disabled &
+      background: linear-gradient(-45deg, #f2f2f2, #f2f2f2 29px, $disabledColor 0, $disabledColor 33px, transparent 0)
+
+  &__body
+    flex: 1
+    background-color: #f2f2f2
+    border: solid $defaultColor
+    border-width: 0 5px 5px 5px
+    border-bottom:
+      left-radius: 5px
+      right-radius: 5px
+    padding:
+      top: 10px
+      left: 45px
+    overflow: hidden
+    position: relative
+
+    .package_hover &
+      border-color: $defaultHoverColor
+
+    .package_selected &
+      border-color: $selectedColor
+
+    .package_selected.package_hover &
+      border-color: $selectedHoverColor
+
+    .package_disabled &
+      border-color: $disabledColor
+
+  &__title
+    font-size: 48px
+    color: #000
+
+    .package_disabled &
+      color: $disabledColor
+
+  &__filling
+    display: block
+    font-size: 24px
+
+  &__features
+    margin: 15px 0 35px
+    font-size: 14px
+
+  &__image
+    position: absolute
+    left: -25px
+    right: -35px
+    bottom: -105px
+    z-index: 100
+
+    .package_disabled &
+      opacity: 0.5
+
+  &__weight
+    position: absolute
+    z-index: 200
+    bottom: 10px
+    right: 10px
+    width: 81px
+    height: 71px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    background-color: $defaultColor
+    border-radius: 50%
+    color: #fff
+    font-size: 42px
+    line-height: 22px
+    padding-top: 10px
+
+    .package_hover &
+      background-color: $defaultHoverColor
+
+    .package_selected &
+      background-color: $selectedColor
+
+    .package_selected.package_hover &
+      background-color: $selectedHoverColor
+
+    .package_disabled &
+      background-color: $disabledColor
+
+  &__units
+    margin-top: 5px
+    font-size: 21px
+
+  &__footer
+    margin-top: 15px
+    font-size: 13px
+    height: 15px
+    text-align: center
+    color: #fff
+    text-shadow: 0 1px 0 #000
+    cursor: auto
+
+    .package_disabled &
+      color: #ff6
+    
+  &__buy
+    cursor: pointer
+    color: $defaultColor
+    border-bottom: 1px dashed $defaultColor
+
+    &:hover
+      color: $defaultHoverColor
