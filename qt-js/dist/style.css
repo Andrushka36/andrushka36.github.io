@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=cyrillic);
+.map {
+  flex-basis: 100%;
+  height: 300px;
+  margin-top: 20px; }
+  @media (min-width: 940px) {
+    .map {
+      margin-top: 0;
+      flex-basis: 500px; } }
+
+.points {
+  margin: 20px 0; }
+  .points__item {
+    padding-right: 24px;
+    position: relative; }
+    .points__item:not(:last-child) {
+      margin-bottom: 10px; }
+
+.delete-point {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 6px;
+  transform: rotate(45deg);
+  cursor: pointer; }
+  .delete-point__first-line {
+    height: 2px;
+    margin-top: 5px;
+    background-color: #000; }
+  .delete-point__second-line {
+    height: 2px;
+    margin-top: -2px;
+    background-color: #000;
+    transform: rotate(90deg); }
+
+.form__text, .form__submit, .form__select {
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc; }
+
+.form {
+  flex-basis: 400px;
+  padding: 0 5px; }
+  @media (max-width: 939px) {
+    .form {
+      margin: 0 auto; } }
+  .form__error {
+    margin-bottom: 10px;
+    font-weight: bold; }
+  .form__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .form__text {
+    flex-basis: 100%;
+    padding: 5px 10px;
+    margin-top: 10px; }
+    @media (min-width: 400px) {
+      .form__text {
+        flex-basis: 250px; } }
+  .form__submit {
+    padding: 5px 10px;
+    margin-top: 10px; }
+    .form__submit:not([disabled]) {
+      cursor: pointer; }
+    .form__submit_margin-auto {
+      margin-left: auto;
+      margin-right: auto; }
+    @media (max-width: 399px) {
+      .form__submit {
+        margin-left: auto;
+        margin-right: auto; } }
+  .form__label {
+    margin-top: 10px; }
+  .form__select {
+    margin-top: 10px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif; }
+
+input, select {
+  font-size: inherit;
+  font-family: inherit; }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 940px;
+  margin: 40px auto 0; }
+

@@ -1,0 +1,29 @@
+.points
+    margin: 20px 0
+
+    &__item
+        padding-right: 24px
+        position: relative
+
+        &:not(:last-child)
+            margin-bottom: 10px
+
+.delete-point
+    width: 12px
+    height: 12px
+    position: absolute
+    top: calc(50% - 6px)
+    right: 6px
+    transform: rotate(45deg)
+    cursor: pointer
+
+    &__first-line
+        height: 2px
+        margin-top: 5px
+        background-color: #000
+
+    &__second-line
+        height: 2px
+        margin-top: -2px
+        background-color: #000
+        transform: rotate(90deg)
