@@ -1,82 +1,51 @@
-const ADD_POINT = "app/route/ADD_POINT";
-const REMOVE_POINT = "app/route/REMOVE_POINT";
-const REORDER_POINTS = "app/route/REORDER_POINTS";
-const MOVE_POINT = "app/route/MOVE_POINT";
+const ADD_POINT = 'app/route/ADD_POINT';
+const REMOVE_POINT = 'app/route/REMOVE_POINT';
+const REORDER_POINTS = 'app/route/REORDER_POINT';
+const CHANGE_ROUTING_MODE = 'app/route/CHANGE_ROUTING_MODE';
 
 const initialState = {
-    pointsCoords: [],
-    pointsNames: [],
-    mapCenter: [55.599574, 38.123856],
+    routingMode: 'auto',
+    list: [],
 }
 
 const reducer = (state = initialState, action = {}) => {
-    const {pointsCoords, pointsNames} = state;
     switch (action.type) {
         case ADD_POINT:
-            const {coords, name} = action.payload;
             return {
                 ...state,
-                pointsCoords: (() => {
-                    const result = pointsCoords.slice();
-                    result.push(coords);
+                list: (() => {
+                    const result = state.list.slice();
+                    result.push(action.payload);
                     return result;
-                })(),
-                pointsNames: (() => {
-                    const result = pointsNames.slice();
-                    result.push(name);
-                    return result;
-                })(),
-                mapCenter: coords,
+                })()
             }
 
         case REMOVE_POINT:
             return {
                 ...state,
-                pointsCoords: (() => {
-                    const result = pointsCoords.slice();
+                list: (() => {
+                    const result = state.list.slice();
                     result.splice(action.payload, 1);
                     return result;
-                })(),
-                pointsNames: (() => {
-                    const result = pointsNames.slice();
-                    result.splice(action.payload, 1);
-                    return result;
-                })(),
-                mapCenter: (() => {
-                    const index = (action.payload === pointsCoords.length - 1) ? pointsCoords.length - 2 : pointsCoords.length - 1;
-                    return pointsCoords[index] || initialState.mapCenter;
-                })(),
+                })()
             }
 
         case REORDER_POINTS:
             return {
                 ...state,
-                pointsCoords: (() => {
-                    const result = pointsCoords.slice();
+                list: (() => {
+                    const result = state.list.slice();
                     const {sourceIndex, destinationIndex} = action.payload;
                     const [removedPoint] = result.splice(sourceIndex, 1);
                     result.splice(destinationIndex, 0, removedPoint);
                     return result;
-                })(),
-                pointsNames: (() => {
-                    const result = pointsNames.slice();
-                    const {sourceIndex, destinationIndex} = action.payload;
-                    const [removedPoint] = result.splice(sourceIndex, 1);
-                    result.splice(destinationIndex, 0, removedPoint);
-                    return result;
-                })(),
+                })()
             }
 
-        case MOVE_POINT:
-            const {number, newCoords} = action.payload;
+        case CHANGE_ROUTING_MODE:
             return {
                 ...state,
-                pointsCoords: (() => {
-                    const result = pointsCoords.slice();
-                    result[number] = newCoords;
-                    return result;
-                })(),
-                mapCenter: newCoords,
+                routingMode: action.payload,
             }
 
         default:
@@ -84,11 +53,11 @@ const reducer = (state = initialState, action = {}) => {
     }
 }
 
-export const addPoint = (coords, name) => {
+export const addPoint = point => {
     return dispatch => {
         dispatch({
             type: ADD_POINT,
-            payload: {coords, name},
+            payload: point,
         })
     }
 }
@@ -111,25 +80,21 @@ export const reorderPoints = (sourceIndex, destinationIndex) => {
     }
 }
 
-export const movePoint = (number, newCoords) => {
+export const changeRoutingMode = routingMode => {
     return dispatch => {
         dispatch({
-            type: MOVE_POINT,
-            payload: {number, newCoords},
+            type: CHANGE_ROUTING_MODE,
+            payload: routingMode,
         })
     }
 }
 
-export const getPointsCoords = state => {
-    return state.points.pointsCoords;
+export const getPoints = state => {
+    return state.points.list;
 }
 
-export const getPointsNames = state => {
-    return state.points.pointsNames;
-}
-
-export const getMapCenter = state => {
-    return state.points.mapCenter;
+export const getRoutingMode = state => {
+    return state.points.routingMode;
 }
 
 export default reducer;

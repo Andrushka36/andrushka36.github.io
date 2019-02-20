@@ -1,12 +1,14 @@
 import React, {Component} from "react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import {connect} from "react-redux";
 
-import {removePoint, reorderPoints, getPointsNames} from "./../../redux/modules/points";
+import {removePoint, reorderPoints, getPoints} from "./../../redux/modules/points";
 
 import "./Points.sass";
 
 class Points extends Component {
+    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+
     removePoint = number => {
         this.props.removePoint(number);
     }
@@ -19,10 +21,13 @@ class Points extends Component {
     }
     
     render() {
-        const pointsNames = this.props.pointsNames;
+        const points = this.props.points.map((point, i) => {
+          return (typeof point === 'string') ? point : `Точка ${this.letters[i]}`;
+        });
+
         return (
             <div className="points">
-                {pointsNames.length > 0 ?
+                {points.length > 0 ?
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <Droppable droppableId="droppable">
                             {(provided, snapshot) => (
@@ -30,7 +35,7 @@ class Points extends Component {
                                     className="points__dnd"
                                     ref={provided.innerRef}
                                 >
-                                    {pointsNames.map((point, i) => {
+                                    {points.map((point, i) => {
                                         return (
                                             <Draggable
                                                 key={`point-${i}`}
@@ -71,7 +76,7 @@ class Points extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        pointsNames: getPointsNames(state),
+        points: getPoints(state),
     }
 }
 
